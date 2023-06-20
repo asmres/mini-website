@@ -1,0 +1,509 @@
+header {
+    background-color: #000;
+    padding: 20px;
+    color: #fff;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    font-size: 24px;
+    color: #fff;
+    margin: 0;
+}
+
+
+nav {
+    position: relative;
+}
+
+.nav-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-menu li {
+    margin-right: 20px;
+}
+
+.nav-menu li:last-child {
+    margin-right: 0;
+}
+
+.nav-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: #ff6f00;
+}
+
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+nav .nav-menu {
+    animation: fadeInDown 1s;
+}
+
+nav .nav-menu li {
+    animation: fadeInDown 1s;
+    animation-delay: calc(var(--delay) * 0.2s);
+}
+
+
+.hero {
+
+    background-color: black;
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero h2 {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #ff6f00;
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #e65100;
+}
+
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero h1 {
+    animation: fadeInUp 1s;
+}
+
+.hero h2 {
+    animation: fadeInUp 1s;
+    animation-delay: 0.3s;
+}
+
+.cta-button {
+    animation: fadeInUp 1s;
+    animation-delay: 0.6s;
+}
+
+
+
+.featured-blogs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 0;
+    background-color: #f9f9f9;
+}
+
+.blog-segment {
+    flex-basis: calc(33.33% - 40px);
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.blog-segment h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.blog-segment ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 20px;
+}
+
+.blog-segment ul li {
+    margin-bottom: 10px;
+}
+
+.blog-segment ul li a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.blog-segment ul li a:hover {
+    color: #ff6f00;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes color-change {
+    0% {
+        background-color: #ff6f00;
+    }
+
+    25% {
+        background-color: #00b8d4;
+    }
+
+    50% {
+        background-color: #8bc34a;
+    }
+
+    75% {
+        background-color: #e91e63;
+    }
+
+    100% {
+        background-color: #ff6f00;
+    }
+}
+
+.blog-segment::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: rotate 4s linear infinite;
+    animation-fill-mode: forwards;
+    z-index: -1;
+}
+
+.blog-segment:hover::before {
+    animation: color-change 4s linear infinite;
+}
+
+
+.news-feeds {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+    padding: 50px 0;
+    background-color: #f9f9f9;
+}
+
+.news-feed {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.news-feed h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.news-feed p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.news-feed a {
+    color: #ff6f00;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.news-feed a:hover {
+    color: #e91e63;
+}
+
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.news-feed {
+    animation: fade-in 0.5s ease-out;
+    animation-fill-mode: backwards;
+    animation-delay: calc(var(--delay) * 0.3s);
+}
+
+
+
+.upcoming-events {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.upcoming-events h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.event {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.event h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.event p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.event a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff6f00;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.event a:hover {
+    background-color: #e91e63;
+}
+
+@keyframes scale-in {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+.event {
+    animation: scale-in 0.5s ease-out;
+    animation-fill-mode: backwards;
+    animation-delay: calc(var(--delay) * 0.3s);
+}
+
+
+
+.jobs {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+}
+
+.jobs h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.job {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.job-image {
+    flex: 0 0 120px;
+    margin-right: 20px;
+}
+
+.job-image img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.job-content {
+    flex: 1;
+}
+
+.job-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.job-description {
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.job-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff6f00;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.job-link:hover {
+    background-color: #e91e63;
+}
+
+.footer {
+    background-color: #000;
+    color: #fff;
+    padding: 50px 0;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.footer-column {
+    flex: 0 0 30%;
+    max-width: 300px;
+    margin-bottom: 40px;
+}
+
+.footer-column h4 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.footer-column p {
+    margin-bottom: 10px;
+}
+
+.social-media li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.social-media a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    color: #000;
+    font-size: 24px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.social-media a:hover {
+    background-color: #fff;
+    color: #e91e63;
+}
+
+.footer-bottom {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+}
+
+
+.footer {
+    position: relative;
+    overflow: hidden;
+}
+
+.footer:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background-image: linear-gradient(45deg, #fff 25%, transparent 25%, transparent 50%, #fff 50%, #fff 75%, transparent 75%, transparent);
+    background-size: 50px 50px;
+    z-index: -1;
+    opacity: 0.1;
+    transform: rotate(-45deg) scale(0.5);
+}
+::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #fff;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #000;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #666;
+  }
